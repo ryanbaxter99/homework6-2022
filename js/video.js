@@ -49,7 +49,7 @@ document.querySelector("#skip").addEventListener("click", function() {
 	// if not then just add 15 
 	else {
 		video.currentTime += 15;
-		
+		console.log("15 seconds added to viedeo")
 	}
 	console.log("New Location: " + video.currentTime);
 });
@@ -61,17 +61,19 @@ document.querySelector("#mute").addEventListener("click", function() {
 	if (video.muted == true) {
 		video.muted = false;
 		document.querySelector("#mute").innerHTML = "Mute";
+		console.log("Video muted");
 	}
 	else {
 		video.muted = true;
 		document.querySelector("#mute").innerHTML = "Unmute";
+		console.log("Video unmuted");
 	}
 });
 
 // volume slider 
 document.querySelector("#slider").addEventListener("click", function() {
 	console.log(this.value);
-	video.volume = this.value / 100; 
+	video.volue = this.value / 100; 
 	document.querySelector("#volume").innerHTML = this.value + "%";
 });
 
